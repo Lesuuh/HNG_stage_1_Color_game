@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A fun interactive color guessing game!" />
+    <meta
+      name="keywords"
+      content="color, game, fun, interactive, guess, color game, hng"
+    />
+    <meta name="author" content="Lesuuh" />
     <title>Color Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div>
-      <h2>Color Game</h2>
-    <p>Guess the color in the box</p>  
-    </div>
-    
-    <div class="header">
-        
-        <p>Score: <span id="score">0</span></p>
-    </div>
-    
-    
-    
-    <p id="game-status">Tap the matching color below</p>
-    
-    <div>
-        <span class="target-box" id="target-box"></span>
-    </div>
-    
-    <div>
-        <ul class="options" id="options"> Loading...
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="heading">
+        <h2>Color Game</h2>
+        <div>
+          <p>Instructions:</p>
+          <p data-testid="gameInstructions">Guess the color in the box</p>
+        </div>
+      </div>
+      <p class="score">Score: <span data-testid="score" id="score">0</span></p>
+      <p data-testid="gameStatus" id="game-status">
+        Tap the matching color below
+      </p>
+
+      <div>
+        <span data-testid="colorBox" class="target-box" id="target-box"></span>
+      </div>
+
+      <div>
+        <ul class="options" id="options">
+          Loading...
         </ul>
-    </div>
-    
-    <button id="reset">New Game</button>
-    
-    
+      </div>
+
+      <button data-testid="newGameButton" id="reset">New Game</button>
+    </main>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
